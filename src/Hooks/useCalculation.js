@@ -16,10 +16,10 @@ function useCalculation() {
   const [inputNumbers, setNumbers] = useState([...initState.numbers]);
   const [inputOperator, setOperator] = useState(initState.operator);
 
-  const resetState = useCallback(() => {
+  const resetState = () => {
     setNumbers([...DEFAULT_STATE.numbers]);
     setOperator(DEFAULT_STATE.operator);
-  }, []);
+  };
 
   const handleAddDigit = (digit) => {
     const numberIndex = inputOperator === '' ? 0 : 1;
@@ -43,9 +43,9 @@ function useCalculation() {
     setNumbers(newStateNumbers);
   };
 
-  const handleSetOperator = useCallback((operator) => {
+  const handleSetOperator = (operator) => {
     setOperator(operator);
-  }, []);
+  };
 
   const handleCalculationResult = () => {
     if (inputOperator === '') {
