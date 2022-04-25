@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { STORAGE_NAME } from './Constants';
 
-import Button from './Components/Button';
 import DigitButton from './Components/Digits';
 import OperationButton from './Components/Operations';
 import useCalculation from './Hooks/useCalculation';
